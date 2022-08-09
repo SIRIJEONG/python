@@ -30,4 +30,8 @@ print(g)
 h = "파이썬 {number5}번째 테스트 중입니다. 나중에 {number6}번째 테스트를 하겠습니다.".format(number5 = 31 , number6 = 32)
 print(h)
 
+name = '파이썬'
+age = 30
+a = f'나의 이름은 {name}입니다. 나이는 {age}입니다.'
+print(a)
 # 포멧팅
