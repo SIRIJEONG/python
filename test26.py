@@ -3,13 +3,14 @@ class Calculator:
     # class쓰고 뒤에는 대문자로 시작하는 클래스이름쓰기 
     def __init__(self):
         self.result = 0
-
+# class안에 들어갈 함수와 변수 설정 
     def add(self, num):
         self.result += num
         return self.result
 
 cal1 = Calculator()
 cal2 = Calculator()
+
 
 print(cal1.add(3))
 print(cal1.add(4))
