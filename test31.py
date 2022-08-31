@@ -10,5 +10,12 @@ class FourCal:
         result = self.first + self.second
         return result
 
-a = FourCal(1,2)
-print(a.add())
+class MoreFourCal(FourCal):
+    def pow(self):
+        result = self.first ** self.second
+        return result
+# 자식클래스에 메서드 추가 
+# pow 함수는 **을 쓰면 제곱이된다.
+
+a = MoreFourCal(4,2)
+print(a.pow())

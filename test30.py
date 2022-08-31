@@ -1,3 +1,4 @@
+# 클래스 상속
 class FourCal:
     def __init__(self,first, second):
         self.first = first
@@ -10,5 +11,12 @@ class FourCal:
         result = self.first + self.second
         return result
 
-a = FourCal(1,2)
+class MoreFourCal(FourCal):
+    pass
+# 자식
+
+a = MoreFourCal(4,2)
 print(a.add())
+
+# 부모가 만든걸 자식이 상속받아도 똑같이 다 쓸수있다.
+
