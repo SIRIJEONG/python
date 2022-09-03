@@ -9,4 +9,5 @@ b = Family()
 print(a.lastname)
 print(b.lastname)
 
-# 각각 객체마다 변수를 쓸때는 객체변수를 쓴다.
+# 각각 객체마다 변수를 쓸때는 객체변수를 쓴다. 
+
