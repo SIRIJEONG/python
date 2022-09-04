@@ -29,3 +29,34 @@ finally:
     f.close
 # 파일을 처음 열었을때 닫아주기 위해 finally 사용 
 # 어떤 오류가 발생할지 모를때는 Exception 을 사용한다.
+
+# 여러개의 오류 처리하는 방법 
+try:
+    a = [1,2]
+    print(a[3])
+    4/0
+except ZeroDivisionError:
+    print("0으로 나눌 수 없습니다.")
+except IndexError:
+    print("인덱싱할 수 없습니다.")
+# except를 해서 여러개의 예외 처리를 할 수 있다.
+
+try:
+    f = open("없는파일", 'r')
+except FileNotFoundError:
+    pass
+# 오류회피하기
+
+
+class Bird:
+    def fly(self):
+        raise NotImplementedError
+
+class Eagle(Bird):
+    def fly(self):
+        print("very fast")
+
+eagle = Eagle()
+eagle.fly()
+# 일부러 오류 발생시키기
+# raise뒤에 오류이름을 작성하면 오류가 발생한다.
