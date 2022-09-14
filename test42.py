@@ -12,4 +12,6 @@ def Gugu(n):
     return result
 
 print(Gugu(2))
+
+    # 구구단 
     
