@@ -24,3 +24,5 @@ g = "show me the money"
 print(g.split())
 # 문자열 자료형이있으면 띄어씌기를 기준으로 리스트를 만든다.
 
+
+
