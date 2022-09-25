@@ -31,3 +31,18 @@ python three"""
 
 print(p.findall(data))
 # re.M 은 ^를 맨처음만이아닌 각라인 처음으로 인식시키는 옵션이다.
+
+# VERBOSE, X
+import re
+charref = re.compile(r'&[#](0[0-7]+|[0-9]+|x[0-9a-fA-F]+);')
+# 긴 정규표현식이 있을때 나눠서 쓸수 있게 만들어 주는 옵션
+
+charref = re.compile(r"""
+&[#]
+(
+    0[0-7]+
+    [0-9]+
+    x[0-9a-fA-F]+
+)
+;
+""",re.VERBOSE)
