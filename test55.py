@@ -34,4 +34,26 @@ import re
 p = re.compile(".+(?=:)")
 m = p.search("http://google.com")
 print(m.group())
+# 검색조건에는 포함되나 결과에는 포함에 안돼기때문에 http만 출력이된다.
+
+# 전방탐색: 부정형 (?!)
+import re
+p = re.compile(".*[.](?!bat$|exe$).*$", re.M)
+l = p.findall("""
+autoxec.exe
+autoxec.bat
+autoxec.jpg
+""")
+print(l)
+
+# 문자열 바꾸기sub
+import re
+s = re.compile('(blue|blue|red)')
+print(s.sub('colour', 'blue socks and red shoes'))
+
+# Greedy vs Non-Greedy
+import re
+x = '<html><head><title>title</title>'
+print(re.match('<.*>', x).group()) #greedy
+print(re.match('<.*?>', x).group()) #non-greedy = 최소한으로 반복하겠다
 

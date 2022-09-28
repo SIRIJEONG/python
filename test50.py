@@ -9,3 +9,4 @@ p = re.compile('[a-z]+')
 m = p.finditer('show me the money')
 for r in m:
     print(m)
+
